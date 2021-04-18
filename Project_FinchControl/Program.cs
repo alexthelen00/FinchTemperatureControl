@@ -214,7 +214,7 @@ namespace Project_FinchControl
 
             TemperatureSensorValue = ((int)finchRobot.getTemperature());
 
-            finchRobot.setLED(0, 255, 0);
+            finchRobot.setLED(0, 245, 0);
             finchRobot.wait(4000);
 
             finchRobot.setMotors(0, 255);
@@ -262,7 +262,7 @@ namespace Project_FinchControl
             Console.WriteLine("\tThe user must first connect to the Finch using menu choice (a)");
             Console.WriteLine("\tNext the user should choose menu choice (b) and follow the steps to run the application.");
             Console.WriteLine("\tAfter the conditions are set when the program finally runs a blue light will turn on when");
-            Console.WriteLine("\tthe temperature is being collected and then it will turn green before the robot returns to position");
+            Console.WriteLine("\tthe temperature is being collected and then it will turn green before the robot returns to its position");
             Console.WriteLine("\tOnce the robot has returned to its first position the temperature at that location will be displayed");
             Console.WriteLine("\tThanks for Viewing!");
 
@@ -325,9 +325,7 @@ namespace Project_FinchControl
 
             DisplayMenuPrompt("Main Menu");
 
-            //
-            // reset finch robot
-            //
+            
             finchRobot.setLED(0, 0, 0);
             finchRobot.noteOff();
 
@@ -372,9 +370,7 @@ namespace Project_FinchControl
             DisplayContinuePrompt();
         }
 
-        /// <summary>
-        /// display continue prompt
-        /// </summary>
+        
         static void DisplayContinuePrompt()
         {
             Console.WriteLine();
@@ -382,9 +378,7 @@ namespace Project_FinchControl
             Console.ReadKey();
         }
 
-        /// <summary>
-        /// display menu prompt
-        /// </summary>
+        
         static void DisplayMenuPrompt(string menuName)
         {
             Console.WriteLine();
@@ -392,9 +386,7 @@ namespace Project_FinchControl
             Console.ReadKey();
         }
 
-        /// <summary>
-        /// display screen header
-        /// </summary>
+        
         static void DisplayScreenHeader(string headerText)
         {
             Console.Clear();
